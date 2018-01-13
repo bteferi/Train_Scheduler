@@ -160,10 +160,6 @@
         var newDestinationCell = $('<td>');
         newDestinationCell.append(snapshot.val().destination);
         newRow.append(newDestinationCell);
-    // first train shouldnt be displayied on the page
-      // var first_train_Cell = $('<td>');
-      // first_train_Cell.append(snapshot.val().first_train);
-      // first train keep as a var now - do not display yet
 
 
         var new_frequency=$('<td>');
@@ -173,6 +169,24 @@
 
            $('#train-data').append(newRow);
 
+//=====================first train, next train , minutes ==================
+// first train shouldnt be displayied on the page
+  // var first_train_Cell = $('<td>');
+  // first_train_Cell.append(snapshot.val().first_train);
+  // first train keep as a var now - do not display yet
+
+// create a var to hold new arrival
+// var next_Arrival = first_train_Cell+new_frequency
+
+// minutes_Away = next_Arrival - current_time
+  // get thier value
+
+// current_time=moment()
+
+// current_time is rn
+
+
+//===============================================
 
     //   var startDate = snapshot.val().startDate;
     //   newStartDateCell.append(startDate);
