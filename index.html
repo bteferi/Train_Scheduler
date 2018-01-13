@@ -80,7 +80,7 @@
                 <label for="frequency-input">Frequency</label>
                 <textarea class="form-control" id="frequency-input" type="text"></textarea>
               </div>
-              <button class="btn btn-default" id="add-user" type="submit">Submit</button>
+              <button class="btn btn-default" id="add-train" type="submit">Submit</button>
             </form>
           </div>
         </div>
@@ -110,30 +110,30 @@
     var database = firebase.database();
 
     // Initial Values
-    var role = "";
-    var name = "";
-    var startDate = "";
-    var rate = "";
+    var train_name = "";
+    var destination = "";
+    var first_train = "";
+    var frequency = "";
 
     // Capture Button Click
-    $("#add-user").on("click", function() {
+    $("#add-train").on("click", function() {
       // Don't refresh the page!
       event.preventDefault();
-
+//train-name-input"
       // YOUR TASK!!!
       // Code in the logic for storing and retrieving the most recent user.
       // Don't forget to provide initial data to your Firebase database.
       // change names of variables to match your search box value
-      role = $("#destination-input").val().trim();
-      name = $("#train-name-input").val().trim();
-      startDate = $("#first-train-input").val().trim();
-      rate = $("#frequency-input").val().trim();
+      train_name = $("#train-name-input").val().trim();
+      destination = $("#destination-input").val().trim();
+      first_train = $("#first-train-input").val().trim();
+      frequency = $("#frequency-input").val().trim();
 
       database.ref().push({
-        role: role,
-        name: name,
-        startDate: startDate,
-        rate: rate
+        train_name: train_name,
+        destination: destination,
+        first_train: first_train,
+        frequency: frequency
       });
 
     });
